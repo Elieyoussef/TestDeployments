@@ -55,7 +55,7 @@ The access_token and expires_in properties of the token variable to the values o
 ##Try it !
 Copy/paste the below code in a new script and try the different instructions (replace the structuredId and deviceId with values obtained from your Nest home simulator) 
 ```
-var clientModule = require("nest/nestClient");
+var clientModule = require("/modules/nest/nestClient");
 var nest = new clientModule.NestClient(true);
  
 try {
