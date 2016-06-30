@@ -11,8 +11,8 @@ execute=authenticated
  * @module getRequestCodeUrl
  */
 
-var config = require("../config");
-var util = require("../util");
+var config = require("../config.js");
+var util = require("../util.js");
 
 var urlConfig = config.getNestAuthUrl();
 var username = request.parameters.username;

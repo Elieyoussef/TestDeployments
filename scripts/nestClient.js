@@ -4,7 +4,7 @@ write=nobody
 execute=authenticated 
   **/ 
  
- var config = require("./config");
+ var config = require("./config.js");
 var http = require("http");
 var availableTypes = ["thermostats", "smoke_co_alarms"];
 

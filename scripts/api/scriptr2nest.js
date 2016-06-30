@@ -14,7 +14,7 @@ execute=authenticated
  * Note: the parameters 
  */
 
-var clientModule = require("../nestClient");
+var clientModule = require("../nestClient.js");
 var nest = new clientModule.NestClient(true);
 
 var opData = handleRequest(request);

@@ -14,7 +14,7 @@ execute=authenticated
  * @return {Object} oauth token and expiration time
  */
 
-var config = require("../config");
+var config = require("../config.js");
 var http = require("http");
 
 var code = request.parameters.code;
