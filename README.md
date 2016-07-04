@@ -6,7 +6,7 @@ Whether or not you already own Nest devices (smart thermostat or smoke alarm), y
 ##Create Nest clients from the Nest developer web site
 Before you start playing around with your virtual device, you first have to create a Nest client. So head to the client section of the Nest developer web site (you will have to sign up for a developer account there).
 If you're familiar with the creation of applications for Facebook or Twitter, you will observe that this is quite similar: the client is actually a Nest app for which you specify the permissions it can ask to obtain on your devices. Those permissions will be further granted by an end user - the owner of the devices - also owning an account at Nest (the one you created in the previous paragraph), through a nominal OAuth authentication process.
-Also make sure to set the value of the "REDIRECT URI" field of the "OAUTH SETTINGS" section to the URL of the callback script (see below for more on this script): https://api.scriptr.io/nest/authorization/getAccessToken?auth_token=RzV1QkYvVzc6Mg== (replace this latter value with your anonymous scriptr; token)
+Also make sure to set the value of the "REDIRECT URI" field of the "OAUTH SETTINGS" section to the URL of the callback script (see below for more on this script): https://api.scriptr.io/nest/authorization/getAccessToken.js?auth_token=RzV1QkYvVzc6Mg== (replace this latter value with your anonymous scriptr; token)
 scriptr; client for Nest
 ##Purpose of this library
 The purpose of this client is to wrap Nest's REST APIs so they can be easily used from within scripts. It is implemented using scriptr; scripts.
@@ -18,7 +18,7 @@ The main component is "nestClient". It is accompanied with two other utility scr
 - nest/config
 
 ##Obtaining a Nest authentication token
-Using a REST client, such as API Kitchen for example, issue a POST request to getRequetCodeUrl ( https://api.scriptr.io/nest/authorization/getRequestCodeUrl), passing your scriptr; authentication token and a timestamp. The call should return something similar to the below
+Using a REST client, such as API Kitchen for example, issue a POST request to getRequetCodeUrl ( https://api.scriptr.io/nest/authorization/getRequestCodeUrl.js), passing your scriptr; authentication token and a timestamp. The call should return something similar to the below
 ```
 {
     "response": {
