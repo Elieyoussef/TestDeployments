@@ -28,6 +28,9 @@ var devicesUrl = "/devices";
 // suffixe to add to the nest root url to manipulate structures
 var structuresUrl = "/structures";
 
+//In case the id was not sent, read the predefined structure id from the config file
+var defaultStructureId = "";
+
 // generate a random state to be used in the oauth 2 process' steps
 var state = (function() {
   return ('xxxxxx'.replace(/[xy]/g, function(c) {
