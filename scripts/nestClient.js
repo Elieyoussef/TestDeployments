@@ -50,12 +50,15 @@ NestClient.prototype.setAway = function(id) {
  */
 NestClient.prototype.updateStructure = function(id, params) {
   
-  if (!id) {
-    
-    throw {
-      "errorCode": "Invalide_parameter",
-      "errorDetail": "NestClient.updateStructure : id cannot be null or empty"
-    }
+  if (!id || id=="") {
+  //In case the id was not sent, read the predefined structure id from the config file
+    id = config.defaultStructureId;
+      if (!id || id=="") {
+          throw {
+            "errorCode": "Invalide_parameter",
+            "errorDetail": "NestClient.updateStructure : id cannot be null or empty"
+          }
+      }
   };
   
   var requestParams = {  
