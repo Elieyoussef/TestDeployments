@@ -1,6 +1,6 @@
  var gitPayload = JSON.parse(request.rawBody);
  var sha=null;
- var branch="master";// add the branch that you need to trigger
+ var branch="refs/heads/master";// add the branch that you need to trigger
 
 if(gitPayload!=null || gitPayload != ""){
         		
@@ -13,7 +13,7 @@ if(gitPayload!=null || gitPayload != ""){
         		var deploymentId=gitPayload.deployment.id;
                 var deploybranch = gitPayload.deployment.ref;
                 if(deploybranch !=   branch){//check if the deployment is done on the specified branch
-                    return "Nothing to do";/// nothing to do move along
+                    return deploybranch+"Nothing to do";/// nothing to do move along
                 }
                 
                 try{
